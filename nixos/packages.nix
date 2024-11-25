@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
   nixpkgs.config = {
     allowUnfree = true;
     # permittedInsecurePackages = ["python-2.7.18.8" "electron-25.9.0"];

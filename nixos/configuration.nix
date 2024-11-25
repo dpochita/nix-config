@@ -2,7 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ./packages.nix
-    # ./modules/bundle.nix
+    ./modules/bundle.nix
   ];
   # nixpkgs.overlays = [ inputs.polymc.overlay ];
 
