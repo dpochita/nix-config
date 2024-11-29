@@ -1,5 +1,4 @@
 {
-
   imports = [
     ./opts.nix
     ./keymaps.nix
@@ -11,6 +10,15 @@
     enable = true;
 
     defaultEditor = true;
-    colorschemes.oxocarbon.enable = true;
+
+    colorschemes = {
+      tokyonight = {
+        enable = true;
+
+        settings = {
+          style = "night";
+        };
+      };
+    };
   };
 }

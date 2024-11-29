@@ -31,7 +31,6 @@
     # (python3.withPackages (ps: with ps; [ requests ]))
 
     # CLI utils
-    # neovim
     neofetch
     file
     tree

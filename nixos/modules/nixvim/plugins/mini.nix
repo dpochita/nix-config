@@ -1,20 +1,21 @@
 {
-  programs.nixvim.plugins.mini = {
-    enable = true;
+  programs.nixvim = {
+    plugins.mini = {
+      enable = true;
 
-    modules = {
-      align = {};
-      basics = {
-        options.extra_ui = true;
+      modules = {
+        ai = {
+          n_lines = 500;
+        };
+        surround = { };
+        statusline = { };
+        pairs = { };
       };
-      clue = {};
-      cursorword = {};
-      doc = {};
-      extra = {};
-      indentscope = {};
-      trailspace = {};
-      misc = {};
-      surround = {};
     };
+    extraConfigLua = ''
+      require('mini.statusline').section_location = function()
+        return '%2l:%-2v'
+      end
+    '';
   };
 }
